@@ -13,11 +13,9 @@ local MAX_TILES = #workspace.Tiles:GetChildren()
 local QueueService = {}
 
 function QueueService.init(self: QueueService)
-	-- The queue starts empty. Individual positions are created dynamically as
-	-- players register, allowing nil positions to represent unused queue slots.
 	self.tiles = {}
 
-	-- PlayerAdded handles players who join after the service has initialized.
+	-- PlayerAdded handles players who join after init.
 	-- Registering them immediately gives every connected player a queue position
 	-- that can later be used when their character spawns.
 	Players.PlayerAdded:Connect(function(player)

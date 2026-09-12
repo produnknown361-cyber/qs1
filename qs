@@ -199,7 +199,7 @@ function QueueService.teleportPlayer(self: QueueService, player: Player)
 	self:notifyFrontStatus(player, index)
 end
 
--- Moves a living character toward its newly assigned queue position.
+-- Moves a character toward its newly assigned queue position.
 -- Unlike teleportPlayer(), this is used when the queue changes while the player
 -- is already present, allowing the character to visibly walk forward.
 function QueueService.moveTo(self: QueueService, player: Player)

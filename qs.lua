@@ -15,7 +15,7 @@ local TURN_TIME = 30 -- seconds the front player has before the server ends thei
 
 local QueueService = {}
 
-function QueueService.init(self: QueueService) -- called once by the server entry script
+function QueueService.init(self: QueueService)
 	self.tiles = {} -- array of UserIds; array index doubles as tile number
 	self.timers = {} -- UserId -> task.delay thread for the front player's turn
 
